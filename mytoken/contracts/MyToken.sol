@@ -8,6 +8,9 @@ import "@openzeppelin/contracts/utils/cryptography/draft-EIP712.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/draft-ERC721Votes.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
+/**
+
+ */
 contract MyToken is ERC721, Pausable, Ownable, EIP712, ERC721Votes {
     using Counters for Counters.Counter;
 
@@ -23,6 +26,7 @@ contract MyToken is ERC721, Pausable, Ownable, EIP712, ERC721Votes {
         _unpause();
     }
 
+    //特权帐户将能够发出新的令牌
     function safeMint(address to) public onlyOwner {
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
