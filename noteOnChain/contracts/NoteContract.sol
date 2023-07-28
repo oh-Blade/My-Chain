@@ -14,5 +14,9 @@ contract NoteContract{
         emit NewNote(msg.sender, note);
     }
 
+    function getNotesLen(address own) public view returns (uint){
+        return notes[own].length;
+    }
+
 
 }
