@@ -72,7 +72,7 @@ contract MyContract is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Acc
     function supportsInterface(bytes4 interfaceId)
         public
         view
-        override(ERC721, ERC721Enumerable, AccessControl)
+        override(AccessControl, ERC721, ERC721Enumerable, ERC721URIStorage)
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
