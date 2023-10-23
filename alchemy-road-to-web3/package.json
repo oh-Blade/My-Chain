@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ethereum-cryptography": "^2.1.2"
+    "ethereum-cryptography": "^1.2.0"
   }
 }
